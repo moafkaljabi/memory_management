@@ -1,14 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+#include "stringMethods.h"
 
-typedef struct {
 
-size_t length;
-char  buffer[64];
-
-} TextBuffer;
-
-int smartAppend(TextBuffer* dest, const char* src);
 
 TextBuffer* dest;
 const char* src;
@@ -29,7 +21,7 @@ int smart_append(TextBuffer* dest, const char* src) {
  }
   strlen(src);
   strcpy(dest,src);
-  char *pos = strchar(dest,'\0');
+  char *pos = strchr(dest,'\0');
 
   dest[max_buffer_size];
   return 0;
