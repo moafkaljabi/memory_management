@@ -1,9 +1,10 @@
 #include "stringMethods.h"
 
 
-
 TextBuffer* dest;
 const char* src;
+const int max_buffer_size = 64 ;
+
 
 int main() 
 {
@@ -12,7 +13,6 @@ int main()
 }
 
 
-const int max_buffer_size = 64 ;
 int smart_append(TextBuffer* dest, const char* src) {
   // ?
  if(dest == NULL || src == NULL)
