@@ -17,6 +17,8 @@ int smart_append(TextBuffer* dest, const char* src) {
     size_t space_left = MAX_BUFFER_SIZE - dest->length - 1; // Account for null terminator
 
     if (src_len > space_left) {
+
+        
         // Append only what fits
         strncat(dest->buffer, src, space_left);
         dest->length = MAX_BUFFER_SIZE - 1;  // Max out the buffer
